@@ -1,38 +1,48 @@
-# CSV/Excel Automation (merge, selección, renombrado, validación)
+# CSV/Excel Automation (merge, select, rename, validate)
 
-## Instalar
+[Español (README.es.md)](README.es.md)
+
+Automate repetitive CSV/Excel tasks with a simple Python CLI:
+
+- Merge multiple CSV/XLSX files
+- Select specific columns
+- Rename columns with a mapping
+- Validate required columns
+- Export to CSV or XLSX
+
+## Install
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-# En Windows: .venv\Scripts\activate
+# On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Probar con datos de ejemplo
+## Quick demo with sample data
 
 ```bash
 python csv_tool.py \
   --inputs data/a.csv data/b.csv \
   --output out/merged.xlsx \
   --select "id,name,amount" \
-  --rename "name:cliente,amount:importe" \
-  --required "id,cliente"
+  --rename "name:client,amount:value" \
+  --required "id,client"
 ```
 
-Salida esperada:
+Expected:
 
-- `out/merged.xlsx` con 6 filas y columnas `id, cliente, importe`.
-- Logs informativos en consola con filas/columnas cargadas y validaciones.
+- `out/merged.xlsx` with 6 rows and columns: `id, client, value`.
+- Informative logs in the console with loaded rows/columns and validations.
 
-## Uso general
+## General usage
 
-- `--inputs`: 1..N archivos CSV/XLSX
-- `--select`: columnas a mantener (opcional)
-- `--rename`: renombrado "original:nuevo" separados por coma (opcional)
-- `--required`: valida presencia de columnas clave (opcional)
-- `--output`: `.csv` o `.xlsx`
+- `--inputs`: 1..N CSV/XLSX files
+- `--select`: columns to keep (optional)
+- `--rename`: mapping `"original:new"` separated by commas (optional)
+- `--required`: validates presence of key columns (optional)
+- `--output`: `.csv` or `.xlsx`
 
-## Capturas/Outputs
+## Screenshots/Outputs
 
 ### Demostracion: CSV de origen "A".
 
