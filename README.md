@@ -44,14 +44,18 @@ Expected:
 
 ## Screenshots/Outputs
 
-### Demostracion: CSV de origen "A".
+### CSV origin "A".
 
-![Demostración: CSV de origen A](images/a.png)
+![CSV origin A](images/a.png)
 
-### Demostracion: CSV de origen "B"
+### CSV origin "B"
 
-![Demostración: CSV de origen B](images/b.png)
+![CSV origin B](images/b.png)
 
-### Demostracion: Resultado de la combinación del CSV "A" y "B"
+### Merged CSV "A" & "B"
 
-![Demostración: combinación de CSVs](images/merged.png)
+![Merged CSVs](images/merged.png)
+
+### Logs in terminal
+
+![Logs in terminal](images/logs.png)
